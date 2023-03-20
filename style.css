@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&family=Kaushan+Script&family=Poppins&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    /* background-color: rgb(92, 190, 146); */
+    background-color: #4E6E81;
+    font-family: 'Finger Paint', cursive;
+}
+:root {
+    --winning-blocks:#44535bea;
+}
+.ttt-game{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 80px auto;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.ttt-text{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+h1{
+    font-size: 55px;
+    text-transform: uppercase;
+    color: #e09f8d;
+}
+button{
+    width: 100px;
+    padding: 7px 12px;
+    font-size: 15px;
+    font-weight: 600;
+   border-radius: 8px;
+   background-color: #e09f8d;
+   border-color: #e09f8d;
+   color: #4E6E81;
+   border: none;
+   margin-top:15px;
+  transition: 200ms transform;
+}
+button:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+#playerText{
+    margin: 10px;
+    color: #e09f8d;
+}
+#gameboard{
+    width: 370px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.box{
+    height: 120px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 2.5px solid;
+    border-bottom: 2.5px solid;
+    color: #e09f8d;
+    font-size: 90px;
+    cursor: pointer;
+}
+.box:nth-child(3n){
+    border-right: none;
+}
+.box:nth-child(6)~.box{
+    border-bottom: none;
+}
+@media screen and (max-width: 800px) {
+    h1{
+        font-size: 40px;
+    }
+    #gameboard{
+        width: 280px;
+    }
+    .box{
+        height: 90px;
+        width: 90px;
+        font-size: 65px;
+    }
+}
